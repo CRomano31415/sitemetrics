@@ -9,7 +9,6 @@ after_create :send_new_user_emails
 private
 
 def send_new_user_emails
-	NewUserMailer.new_user(current_user).deliver_now
+	NewUserMailer.new_user(self).deliver
 end 
-
 end
