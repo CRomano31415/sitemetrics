@@ -6,6 +6,6 @@ class NewUserMailer < ApplicationMailer
 	def new_user(user)
      @user = user
   	 
-  	 mail(to: @user.email, subject: "Welcome to SiteMetrics ")
+  	 mail(to: @user.email, subject: "Welcome to SiteMetrics ", body: 'test')
 	end 
 end
