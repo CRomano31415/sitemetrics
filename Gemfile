@@ -11,6 +11,7 @@ group :production do
 end 
 
 group :development do
+  gem 'mailcatcher'
   gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -21,7 +22,6 @@ group :development, :test do
   gem 'rails-controller-testing'
 end
 
-gem 'mailcatcher'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
