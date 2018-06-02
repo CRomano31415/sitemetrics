@@ -1,0 +1,13 @@
+<%= form_for @r_app do |f| %>
+	<div class="form-group">
+ 		<%= f.label :name%>
+ 	    <%= f.text_field :name, class: 'form-control', placeholder: 'Enter site name' %>
+ 	</div>
+	<div class="form-group">
+		<%= f.label :url %>
+		<%= f.text_field :url %>
+  	</div>
+	<div class="form-group">
+	<%= f.submit "Save", :class => 'btn btn-md btn-primary' %>
+	</div>
+<% end %>
