@@ -1,0 +1,23 @@
+<div class="row">
+  <h1>All Applications</h1>
+
+  <div class="col-md-4">
+      <%= link_to "Register an Application", new_r_app_path, class: "btn btn-success" %>
+  </div>
+  <hr>
+
+  <div class='row'>
+    <div class='col-md-8'>
+     <% @r_app.each do |r| %>
+       <div class='media'>
+         <div class="media-body">
+           <h4 class="media-heading">
+      	     <%= link_to r.name, r %>
+           </h4>
+      	   <small><%= r.url %></small>
+         </div>
+       </div>
+      <% end %>
+    </div>
+  </div>
+</div>
