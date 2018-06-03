@@ -15,8 +15,8 @@ class RAppsController < ApplicationController
 
   def create
     @r_app = RApp.new(r_app_params)
-    @r_app_user = current_user
-
+    @r_app.user = current_user 
+    
       if @r_app.save
         flash[:notice] = "Application was registered successfully"
         redirect_to @r_app 

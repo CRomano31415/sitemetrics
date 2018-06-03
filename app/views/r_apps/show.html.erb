@@ -6,16 +6,18 @@
 
       <div class="row">
        <h4><%= @r_app.url %></h4>
-       <% @event.each do |name, event| %>
+       <% if @events.present? %>
+       <% @events.each do |name, event| %>
          <h3><%= name %>:</h3>
           <p>Count: <%= event.size %></p>
+         <% end %>
          <% end %>
       </div>
     </div>
 
     <div class="col-md-4">
-      <%= link_to "Back to index", r_app_path, class: 'btn btn-primary' %>
+      <%= link_to "Back to index", r_apps_path, class: 'btn btn-primary' %>
       <%= link_to "Edit", edit_r_app_path(@r_app), class: 'btn btn-success' %>
-      <%= link_to "Delete", @r_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
+      <%= link_to "Delete", r_app_path(@r_app) , method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
     </div>
   </div>
