@@ -1,8 +1,8 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
-  def change
+ def change
     create_table :events do |t|
       t.string :name
-      t.references :r_apps, foreign_key: true
+      t.references :r_app, foreign_key: true
 
       t.timestamps
     end

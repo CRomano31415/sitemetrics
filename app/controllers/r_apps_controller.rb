@@ -7,6 +7,7 @@ class RAppsController < ApplicationController
 
   def show
     @r_app = RApp.find(params[:id])
+    @events = @r_app.events.group_by(&:name)
   end
 
   def new

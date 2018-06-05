@@ -13,6 +13,7 @@ group :development do
   gem 'sqlite3'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'faker'
 end 
 
 group :development, :test do
@@ -33,7 +34,7 @@ gem 'devise'
 gem 'figaro', '1.0'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
-# gem 'bootstrap', '~> 4.1.1'
+
 gem 'sprockets'
 gem 'autoprefixer-rails'
 gem 'pundit'
