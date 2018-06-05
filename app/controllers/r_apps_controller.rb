@@ -2,7 +2,7 @@ class RAppsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @r_apps = RApp.all
+    @r_apps = RApp.where(user_id: current_user.id)
   end
 
   def show
