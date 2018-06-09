@@ -6,7 +6,9 @@ class RAppsController < ApplicationController
   end
 
   def show
-    @r_app = RApp.find(params[:id])
+    @r_app = current_user.r_apps.find(params[:id])
+
+    # @r_app = RApp.find(params[:id])
     @events = @r_app.events.group_by(&:name)
   end
 
@@ -28,11 +30,13 @@ class RAppsController < ApplicationController
   end 
 
   def edit
-    @r_app = RApp.find(params[:id])
+    # @r_app = RApp.find(params[:id])
+    @r_app = current_user.r_apps.find(params[:id])
   end
 
   def update
-     @r_app = RApp.find(params[:id])
+     # @r_app = RApp.find(params[:id])
+     @r_app = current_user.r_apps.find(params[:id])
      @r_app.assign_attributes(r_app_params)
 
       if @r_app.save
