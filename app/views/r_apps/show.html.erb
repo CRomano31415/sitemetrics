@@ -7,11 +7,13 @@
       <div class="row">
        <h4><%= @r_app.url %></h4>
        <% if @events.present? %>
+       <h4>Events:</h4>
        <% @events.each do |name, event| %>
-         <h3><%= name %>:</h3>
-          <p>Count: <%= event.size %></p>
-         <% end %>
-         <% end %>
+<!--            <%= event %>
+ -->           <%= link_to name, "/#{name}", onclick: 'sitemetrics.report('+"'"+name+"'"+')' %>
+            <p>Count: <%= event.size %></p>
+           <% end %>
+       <% end %>
       </div>
     </div>
 

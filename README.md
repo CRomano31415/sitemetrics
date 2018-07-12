@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Events
 
-Things you may want to cover:
+Makes AJAX request to API to create event on the server. 
 
-* Ruby version
+`POST` 
 
-* System dependencies
+###Attributes
+*eventName*
 
-* Configuration
+###Request
+sitemetrics.report('event name here');
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Response
