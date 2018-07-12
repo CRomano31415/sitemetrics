@@ -1,15 +1,15 @@
 # README
 
-## Events
+## Events ##
 
 Makes AJAX request to API to create event on the server. 
 
 `POST` 
 
-###Attributes
+###Attributes###
 *eventName*
 
-###Request
+###Request###
 sitemetrics.report('event name here');
 
-###Response
+###Response###
