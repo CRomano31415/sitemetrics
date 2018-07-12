@@ -3,12 +3,12 @@ class RAppsController < ApplicationController
 
   def index
     @r_apps = RApp.where(user_id: current_user.id)
+    flash[:notice] = "User ID not found" if current_user.nil?
   end
 
   def show
     @r_app = current_user.r_apps.find(params[:id])
 
-    # @r_app = RApp.find(params[:id])
     @events = @r_app.events.group_by(&:name)
   end
 
