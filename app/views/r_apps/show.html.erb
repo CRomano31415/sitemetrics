@@ -9,10 +9,12 @@
        <% if @events.present? %>
        <h4>Events:</h4>
        <% @events.each do |name, event| %>
-<!--            <%= event %>
- -->           <%= link_to name, "/#{name}", onclick: 'sitemetrics.report('+"'"+name+"'"+')' %>
-            <p>Count: <%= event.size %></p>
+           <!-- <%= event %> -->
+           <p><%= link_to name, "/#{name}", onclick: 'sitemetrics.report('+"'"+name+"'"+')' %></p>
            <% end %>
+            <p><%= pie_chart @r_app.events.group(:name).count%>
+            </p>
+            <%= line_chart @r_app.events.group_by_day(:created_at).count %>
        <% end %>
       </div>
     </div>

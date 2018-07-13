@@ -14,6 +14,8 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 
 var sitemetrics = {};
